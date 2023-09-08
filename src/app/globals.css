@@ -2,26 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+a.textLink {
+  color: #EC008C;
+  text-decoration: underline;
+}
+
+a.textLink:hover {
+  color: #121740;
+}
+
+p, li {
+  color: #6A7492;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 10px 24px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(to right, #EC008C, #FC6767);
+  box-shadow: 0 4px 16px rgba(252,103,103,0.25);
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+}
+
+@media (max-width:720px) {
+  .btn {
+    padding: 8px 12px;
+    font-size: 16px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn:hover {
+  box-shadow: 0 4px 16px rgba(68,148,255,0.25);
 }
+
+.btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(to right, #212D61, #4294FF);
+  transition: all 200ms ease-in-out;
+}
+
+.btn:hover:before {
+  opacity: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap');
