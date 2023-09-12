@@ -42,11 +42,12 @@ p, li {
 }
 
 .btn:hover {
+  background: linear-gradient(to right, #212D61, #4294FF);
   box-shadow: 0 4px 16px rgba(68,148,255,0.25);
 }
 
 .btn:before {
-  content: '';
+  /* content: ''; */
   position: absolute;
   top: 0;
   left: 0;
